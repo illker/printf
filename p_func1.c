@@ -85,7 +85,7 @@ int p_int(va_list args)
  * Return: The number of characters printed
  */
 
-void countnumber(unsigned int n)
+int countnumber(unsigned int n)
 {
 	int count = 0;
 	unsigned int a, b;
