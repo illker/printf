@@ -39,7 +39,7 @@ int p_string(va_list args)
 
 	s = va_arg(args, char *);
 	if (s == NULL)
-		s = "(NULL)"; /* use "(NULL)"  */
+		s = "(NULL)";
 	if (s[0] == '\0')
 		return (0);
 	for (a = 0; s[a] != '\0'; a++)
@@ -58,11 +58,11 @@ int p_int(va_list args)
 	int value, x = 0; /* variable takes value of arguments */
 	unsigned int i; /* Var almacena el numero a imprimir temp en positivo*/
 
-	value = va_args(args, int);
+	value = va_arg(args, int);
 
 	if (value < 0)
 	{
-		_putchar("-");
+		_putchar(45);
 		x = 1;
 		i = value * (-1);
 	}
