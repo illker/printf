@@ -12,7 +12,7 @@
 */
 typedef struct f_print
 {
-	char *format;
+	char *letter;
 	int (*f)(va_list);
 } f_print;
 
