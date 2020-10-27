@@ -28,9 +28,9 @@ int _printf(const char *format, ...)
 				_putchar(format[counter1 + 1]);
 		}
 		counter2 = 0;
-		while (ops[counter2].format != NULL)
+		while (ops[counter2].letter != NULL)
 		{
-			if (*(ops[counter2].format) == format[counter1])
+			if (*(ops[counter2].letter) == format[counter1])
 			{
 				ops[counter2].f(args);
 				break;
