@@ -6,39 +6,50 @@
  */
 int _printf(const char *format, ...)
 {
-	unsigned int counter1, counter2;
 	va_list args;
-
+	int counter = 0, i, j;
 	f_print ops[] = {
 		{"c", p_character},
 		{"s", p_string},
+		{"%", p_percent},
 		{"i", p_int},
 		{"d", p_int},
 		{NULL, NULL}
 	};
+
 	va_start(args, format);
-	if ((!format) || (format[0] == '%' && format[1] == '\0'))
-		return (-1);
-	counter1 = 0;
-	while (format && format[counter1])
+	if (format == NULL)
+		return (0);
+	for (i = 0; format[i] != '\0'; i++)
 	{
-		if (format[counter1] == '%' || format[counter1] == 47)
+		while (format[i] != '%' && format[i] != '\0')
 		{
-			if (format[counter1 + 1] == '%')
-				_putchar(format[counter1 + 1]);
+			_putchar(format[i]);
+			counter++;
+
+			i++;
 		}
-		counter2 = 0;
-		while (ops[counter2].letter != NULL)
+		if (format[i] != '\0')
 		{
-			if (*(ops[counter2].letter) == format[counter1])
+			i++;
+		}
+		else
+			break;
+		for (j = 0; j < 9; j++)
+		{
+			if (format[i] == *(ops[j]).letter)
 			{
-				ops[counter2].f(args);
+				counter += ops[j].f(args);
 				break;
 			}
-			counter2++;
+			else
+			{
+				_putchar(37);
+				_putchar(format[i]);
+				break;
+			}
 		}
-		counter1++;
 	}
 	va_end(args);
-	return (counter2);
+	return (counter);
 }

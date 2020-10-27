@@ -39,7 +39,7 @@ int p_string(va_list args)
 
 	s = va_arg(args, char *);
 	if (s == NULL)
-		s = "(NULL)"; /* use "(NULL)"  */
+		s = "(NULL)";
 	if (s[0] == '\0')
 		return (0);
 	for (a = 0; s[a] != '\0'; a++)
