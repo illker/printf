@@ -13,7 +13,7 @@
 typedef struct f_print
 {
 	char *letter;
-	int (*f)();
+	int (*f)(va_list);
 } f_print;
 
 int _printf(const char *format, ...);
