@@ -1,4 +1,4 @@
-include "holberton.h"
+#include "holberton.h"
 /**
  * _printf - print character to stdout
  * @format: number of args
@@ -12,13 +12,12 @@ int _printf(const char *format, ...)
 	f_print ops[] = {
 		{"c", p_character},
 		{"s", p_string},
-		{"%", p_percent},
 		{"i", p_int},
 		{"d", p_int},
 		{NULL, NULL}
 	};
 	va_start(args, format);
-	if (!format || format[0] == '%' && format[1] == '\0')
+	if ((!format) || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	counter1 = 0;
 	while (format && format[counter1])
@@ -31,7 +30,7 @@ int _printf(const char *format, ...)
 		counter2 = 0;
 		while (ops[counter2].format != NULL)
 		{
-			if (*(ops[counter2].fomat) == format[counter1])
+			if (*(ops[counter2].format) == format[counter1])
 			{
 				ops[counter2].f(args);
 				break;
