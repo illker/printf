@@ -13,13 +13,13 @@
 typedef struct f_print
 {
 	char *format;
-	int (*f)(valist);
+	int (*f)(va_list);
 } f_print;
 
-void p_character(valist f_print);
-void p_string(valist f_print);
-void p_int(valist f_print);
-void countnumber(unsigned int n);
+int p_character(va_list f_print);
+int p_string(va_list f_print);
+int p_int(va_list f_print);
+int countnumber(unsigned int n);
 int _putchar(char c);
 
 #endif /* HOLBERTON_H */
