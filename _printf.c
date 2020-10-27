@@ -8,6 +8,8 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	int counter = 0, i, j;
+	int (*teamf)(va_list) = NULL;
+
 	f_print ops[] = {
 		{"c", p_character},
 		{"s", p_string},
@@ -30,24 +32,23 @@ int _printf(const char *format, ...)
 			i++;
 		}
 		if (format[i] != '\0')
-		{
 			i++;
-		}
 		else
 			break;
-		for (j = 0; j < 9; j++)
+		for (j = 0; j < 5; j++)
 		{
 			if (format[i] == *(ops[j]).letter)
 			{
-				counter += ops[j].f(args);
+				teamf = ops[j].f;
 				break;
 			}
-			else
-			{
-				_putchar(37);
-				_putchar(format[i]);
-				break;
-			}
+		}
+		if (teamf != NULL)
+			counter += teamf(args);
+		else
+		{
+			_putchar(37);
+			_putchar(format[i]);
 		}
 	}
 	va_end(args);
