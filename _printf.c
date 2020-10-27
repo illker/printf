@@ -35,13 +35,13 @@ int _printf(const char *format, ...)
 		{
 			if (format[i] == *(ops[j]).letter)
 				teamf = ops[j].f;
-				break;
+			break;
 		}
 		if (teamf != NULL)
 			counter += teamf(args);
 		else
 			_putchar(37);
-			_putchar(format[i]);
+		_putchar(format[i]);
 	}
 	va_end(args);
 	return (counter);

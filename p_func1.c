@@ -27,7 +27,7 @@ int p_character(va_list args)
 }
 
 /**
- * str_print - Function to print a string to standard output
+ * p_print - Function to print a string to standard output
  * @args: Variadic list of arguments
  * Return: The number of characters printed
  */
