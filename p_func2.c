@@ -6,7 +6,7 @@
  * Return: The number of characters printed
  */
 
-int p_percent(__attribute__((unused))va_list list)
+int p_percent(__attribute__((unused))va_list args)
 {
 	_putchar('%');
 	return (1);
