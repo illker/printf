@@ -16,6 +16,7 @@ typedef struct f_print
 	int (*f)(va_list);
 } f_print;
 
+int _printf(const char *format, ...);
 int p_character(va_list f_print);
 int p_string(va_list f_print);
 int p_int(va_list f_print);
