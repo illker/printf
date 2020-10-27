@@ -15,8 +15,8 @@ int _printf(const char *format, ...)
 		{"i", p_int}, {"d", p_int}, {NULL, NULL}
 	};
 	va_start(args, format);
-	if (format == NULL)
-		return (0);
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		while (format[i] != '%' && format[i] != '\0')
@@ -25,10 +25,7 @@ int _printf(const char *format, ...)
 			counter++;
 			i++;
 		}
-		if (format[i] != '\0')
-			i++;
-		else
-			break;
+		(format[i] != '\0') ? i++ : break;
 		for (j = 0; j < 5; j++)
 		{
 			if (format[i] == *(ops[j]).letter)
