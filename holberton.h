@@ -7,20 +7,20 @@
 #include <stdarg.h>
 /**
 * struct f_print - struct.
-* @format: Number of arguments.
+* @letter: Number of arguments.
 * @f: Pointer pointing to a function.
 */
 typedef struct f_print
 {
 	char *letter;
-	int (*f)(va_list);
+	int (*f)();
 } f_print;
 
 int _printf(const char *format, ...);
-int p_character(va_list f_print);
-int p_string(va_list f_print);
-int p_percent(__attribute__((unused))va_list list);
-int p_int(va_list f_print);
+int p_character(va_list);
+int p_string(va_list);
+int p_percent(__attribute__((unused))va_list);
+int p_int(va_list);
 int countnumber(unsigned int n);
 int _putchar(char c);
 
