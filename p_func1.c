@@ -27,7 +27,7 @@ int p_character(va_list args)
 }
 
 /**
- * str_print - Function to print a string to standard output
+ * p_print - Function to print a string to standard output
  * @args: Variadic list of arguments
  * Return: The number of characters printed
  */
@@ -58,11 +58,11 @@ int p_int(va_list args)
 	int value, x = 0; /* variable takes value of arguments */
 	unsigned int i; /* Var almacena el numero a imprimir temp en positivo*/
 
-	value = va_args(args, int);
+	value = va_arg(args, int);
 
 	if (value < 0)
 	{
-		_putchar("-");
+		_putchar(45);
 		x = 1;
 		i = value * (-1);
 	}
