@@ -14,7 +14,7 @@ int p_percent(__attribute__((unused))va_list args)
 
 /**
 * p_rot13 -  encodes a string using.
-* @s: pointer.
+* @args: Variadic list of arguments
 * Return: count.
 */
 int p_rot13(va_list args)
