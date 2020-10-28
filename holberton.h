@@ -21,6 +21,7 @@ int p_character(va_list f_print);
 int p_string(va_list f_print);
 int p_percent(__attribute__((unused))va_list f_print);
 int p_int(va_list f_print);
+int p_rot13(va_list);
 int countnumber(unsigned int n);
 int _putchar(char c);
 
