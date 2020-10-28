@@ -69,7 +69,7 @@ int p_int(va_list args)
 
 	if (i > 9)
 	{
-		return (x + countnumber(value));
+		return (x + countnumber(i));
 	}
 	_putchar(i + '0');
 	return (1 + x);
