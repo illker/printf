@@ -27,7 +27,7 @@ int p_character(va_list args)
 }
 
 /**
- * p_print - Function to print a string to standard output
+ * p_string - Function to print a string to standard output
  * @args: Variadic list of arguments
  * Return: The number of characters printed
  */
@@ -39,7 +39,7 @@ int p_string(va_list args)
 
 	s = va_arg(args, char *);
 	if (s == NULL)
-		s = "(NULL)";
+		s = "(null)";
 	if (s[0] == '\0')
 		return (0);
 	for (a = 0; s[a] != '\0'; a++)
