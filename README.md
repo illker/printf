@@ -6,6 +6,7 @@ _printf.c 	(https://github.com/nicolasherrerac/printf/blob/main/_printf.c)
 holberton.h	(https://github.com/nicolasherrerac/printf/blob/main/holberton.h)	
 man_3_printf	(https://t.c	(https://twitter.com/illkhttps://github.com/nicolasherrerac/printf/blob/main/man_3_printfer)
 p_func2	(https://twitter.com/illker)https://github.com/nicolasherrerac/printf/blob/main/p_func1.cnt ARGUMENT(shttps://github.com/nicolasherrerac/printf/blob/main/p_func2.cexecute according to options.
+```
 
 ## Return value
 The _printf() function produces output according to a format which is described, returns, if the returns its successful returns the numbers of characters printed.
