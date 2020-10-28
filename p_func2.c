@@ -25,7 +25,7 @@ int p_rot13(va_list args)
 	char n[52] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	s = va_arg(args, char *);
-	
+
 	for (c = 0; s[c] != '\0'; c++)
 		for (i = 0; l[i] != '\0'; i++)
 			if (s[c] == l[i])
