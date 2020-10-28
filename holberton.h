@@ -13,14 +13,14 @@
 typedef struct f_print
 {
 	char *letter;
-	int (*f)();
+	int (*f)(va_list);
 } f_print;
 
 int _printf(const char *format, ...);
-int p_character(va_list);
-int p_string(va_list);
-int p_percent(__attribute__((unused))va_list);
-int p_int(va_list);
+int p_character(va_list f_print);
+int p_string(va_list f_print);
+int p_percent(__attribute__((unused))va_list f_print);
+int p_int(va_list f_print);
 int countnumber(unsigned int n);
 int _putchar(char c);
 
