@@ -22,7 +22,7 @@ _printf("Hello world.");
 _printf("This is my age %d", "17");
 _printf("")
 ```
-## STRUCTS; AND PROTOTYP%sE, FHel wolrdlo ""UNCTIONS
+## STRUCTS; AND PROTOTYPES FUNCTIONS
 ```c
 typedef struct f_print
 {
