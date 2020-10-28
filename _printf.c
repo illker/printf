@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 		if (format[i] != '\0')
 			i++;
 		else
-			break;
+			return (counter);
 		for (j = 0; j < 5; j++)
 		{
 			if (format[i] == *(ops[j]).letter)
