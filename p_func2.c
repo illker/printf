@@ -25,17 +25,25 @@ int p_rot13(va_list args)
 	char n[52] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	s = va_arg(args, char *);
+	if (s == NULL)
+		return (-1);
 
 	for (c = 0; s[c] != '\0'; c++)
+	{
 		for (i = 0; l[i] != '\0'; i++)
+		{
 			if (s[c] == l[i])
 			{
-				count += _putchar(n[i]);
+				_putchar(n[i]);
+				count++;
 				break;
 			}
+		}
 		if (i > 51)
 		{
-			count += _putchar(s[c]);
+			_putchar(s[c]);
+			count++;
 		}
+	}
 	return (count);
 }
