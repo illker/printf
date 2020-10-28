@@ -1,11 +1,11 @@
 # PrintF project 
 
 ```c
-README.md 	(https://github.com/nicolasherrerac/printf/blob/main/README.md)
-_printf.c 	(https://github.com/nicolasherrerac/printf/blob/main/_printf.c)
-holberton.h	(https://github.com/nicolasherrerac/printf/blob/main/holberton.h)	
-man_3_printf	(https://t.c	(https://twitter.com/illkhttps://github.com/nicolasherrerac/printf/blob/main/man_3_printfer)
-p_func2	(https://twitter.com/illker)https://github.com/nicolasherrerac/printf/blob/main/p_func1.cnt ARGUMENT(shttps://github.com/nicolasherrerac/printf/blob/main/p_func2.cexecute according to options.
+README.md 	
+_printf.c 	
+holberton.h		
+man_3_printf	
+p_func2	
 ```
 
 ## Return value
