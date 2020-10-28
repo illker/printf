@@ -21,10 +21,10 @@ int _printf(const char *format, ...)
 	{
 		for (; format[i] != '%' && format[i] != '\0'; counter++, i++)
 			_putchar(format[i]);
-		if (format[i] == '\0')
+		if (format[i] != '\0')
+			i++;
+		else
 			return (counter);
-		i++;
-			
 		for (j = 0; j < 5; j++)
 		{
 			if (format[i] == *(ops[j]).letter)
@@ -38,7 +38,9 @@ int _printf(const char *format, ...)
 		else
 		{
 			_putchar(37);
+			counter++;
 			_putchar(format[i]);
+			counter++;
 		}
 	}
 	va_end(args);
